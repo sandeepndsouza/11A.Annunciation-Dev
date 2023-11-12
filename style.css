@@ -10,7 +10,7 @@ body{
     position: fixed;
     margin-top: 5px;
     /* padding: 20px; */
-    height:   75px;
+    /* height:   75px; */
     background: transparent;
     color: #fff;
     font-size: 1rem;    
@@ -42,7 +42,7 @@ h1{
 .nav{
   background-color: #907457;
   position: fixed;
-    top: 200px;
+    top: 180px;
     width: 100%;
     height: 50px;
     display: flex;
