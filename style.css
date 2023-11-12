@@ -8,20 +8,24 @@ body{
 }
 .header{
     position: fixed;
-    padding: 20px;
-    height: 10vh;
+    margin-top: 5px;
+    /* padding: 20px; */
+    height:   75px;
     background: transparent;
     color: #fff;
     font-size: 1rem;    
 }
+p{
+  font-size: 16px;
+}
 h1{
     text-align: center;
-    font-size:2rem;
+    font-size:50px;
     color: #fff;    
 }
 .fa-brands {
     padding: 25px;
-    font-size: 1rem;
+    font-size: 16px;
     width: 30px;
     text-align: center;
     text-decoration: none;
@@ -35,34 +39,12 @@ h1{
   }
 
 
-/* .navbar{
-    position: fixed;
-    top:10vh;
-    height: 7vh;
-    width: 100%;
-    padding: 1px;
-    background:#907457;
-    color: #cbc7c3;
-    opacity: 0.8;
-    transition: all 0.5s;
-}  */
-
-
-/* #nvbar a{
-    line-height: 80px;
-    color: #cbc7c3;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-size:18px;
-    font-weight: bold;
-    text-transform: uppercase;
-} */
 .nav{
   background-color: #907457;
   position: fixed;
-    top:15vh;
+    top: 200px;
     width: 100%;
-    height: 7vh;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,24 +80,23 @@ padding-top: 20px;
   transition: 0.5s;
 
 }
-
-
 .navbars a:hover{
     background-color: white;
     color: black;
 
 }
 
-
-
-
+.header-scrolled{
+  margin-top: 0px;
+  background-color: black;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    opacity: 0.8;
+}
 .navbar-scrolled{
   background-color: black;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  height: 15vh;
     opacity: 0.8;
 }
-
 
 .banner{
     top: 0;
@@ -123,6 +104,11 @@ padding-top: 20px;
     height: 40vh;
     background: url(img/banner.jpg);
     background-position: center;
+}
+
+
+.parish{
+  min-height: 75vh;
 }
 
 .parish .container-lg{
@@ -155,7 +141,7 @@ padding-top: 20px;
 
 .footer {
     padding: 1px;
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;

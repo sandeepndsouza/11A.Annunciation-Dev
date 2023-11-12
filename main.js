@@ -13,10 +13,10 @@ const headEl = document.querySelector('.header')
 document.addEventListener("scroll",() => {
     if (window.scrollY>=50){
         navEl.classList.add('navbar-scrolled');
-        headEl.classList.add('navbar-scrolled');
+        headEl.classList.add('header-scrolled');
     }else if(window.screenY<200){
         navEl.classList.remove('navbar-scrolled');
-        headEl.classList.remove('navbar-scrolled');
+        headEl.classList.remove('header-scrolled');
     }
 });
 
