@@ -8,10 +8,10 @@ document.addEventListener("click",function(e){
 })
 
 
-const navEl = document.querySelector('.navbar');
+const navEl = document.querySelector('.navbars');
 const headEl = document.querySelector('.header')
-window.addEventListener('scroll',() => {
-    if (window.scrollY>=200){
+document.addEventListener("scroll",() => {
+    if (window.scrollY>=50){
         navEl.classList.add('navbar-scrolled');
         headEl.classList.add('navbar-scrolled');
     }else if(window.screenY<200){
@@ -19,3 +19,8 @@ window.addEventListener('scroll',() => {
         headEl.classList.remove('navbar-scrolled');
     }
 });
+
+    // window.addEventListener("scroll", function(){
+    //     var header = document.querySelector("header");
+    //     header.classList.toggle("sticky",this.window.scrollY > 0);
+    // });
