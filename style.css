@@ -20,7 +20,7 @@ p{
 }
 h1{
     text-align: center;
-    font-size:50px;
+    font-size:40px;
     color: #fff;    
 }
 .fa-brands {
@@ -42,7 +42,7 @@ h1{
 .nav{
   background-color: #907457;
   position: fixed;
-    top: 180px;
+    top: 170px;
     width: 100%;
     height: 50px;
     display: flex;
@@ -76,7 +76,8 @@ padding-top: 20px;
   color: white;
   text-decoration: none;
   letter-spacing: 2px;
-  font-weight: 500px;
+  font-size: 16px;
+  font-weight: 300px;
   transition: 0.5s;
 
 }
@@ -262,7 +263,13 @@ padding: 10px; */
       top:33vh;
       } */
 
-  
+  .register{
+    margin-top: 25px;
+    align-items: center;
+    min-height: 45vh;
+    background-color:linear-gradient(#D5A3FF 0%, #77A5F8 100%);
+    padding: 10px;
+  }
 
   /* teaMS*/
   .team{
@@ -303,6 +310,25 @@ padding: 10px; */
   margin: 10px;
 }
 
+/* About page */
+
+.about img{
+  height: 250px;
+  width: 350px;
+}
+
+.about h2{
+  text-align: center;
+}
+
+
+/* ---------------------------------donations--------------------- */
+
+.donation-option{
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
 
 
 @media (max-width: 480px) {

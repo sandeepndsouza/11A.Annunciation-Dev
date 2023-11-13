@@ -13,8 +13,7 @@
  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <!--Header-->
-  <!--Header-->
+     <!--Header-->
   <section>
     <div class="container-fluid text-center header">
       <!-- Content here -->
@@ -54,17 +53,10 @@
 <section>
   <div class="container">
     <div class="row">
-      <h2>Donations</h2>
-      <p>LUKE 6:38
-        “Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap. For with the measure you use, it will be measured to you.” </p>
-      <hr>
-        <div class="col-lg-6">
-          <h3>Offline payment details</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius et tempore impedit necessitatibus! Maxime, eaque dolorem nostrum corrupti necessitatibus rem possimus quisquam iure provident velit? Modi vel vitae sapiente reprehenderit.</p>
-      </div>
+      <h2>Register</h2>
+      <hr> 
       <div class="col-lg-6">
-        <h3>Online payment</h3>
-        <form class="row g-3" action="connect.php" method="post">
+        <form class="row g-3" method="post">
           <div class="col-md-6">
             <label for="inputFirstName" class="form-label">First Name</label>
             <input type="text" class="form-control" id="inputFirstName" name="firstname" required>
@@ -81,41 +73,22 @@
             <label for="inputMobile" class="form-label">Mobile</label>
             <input type="number" class="form-control" id="inputMobile" name="mobile" required>
           </div>
+
           <div class="col-12">
-            <div class="type-check">
-              <h4>Donation type</h4>
-              <div class="donation-option">
-                <div class="donation">
-                  <input type="radio" id = "check-chrhal" name = "donation" value="c" checked>
-                  <label for="check-chrhal">Church Hall</label>
-                </div>
-                <div class="donation">
-                  <input type="radio" id = "check-masint" name = "donation" value="d">
-                  <label for="check-masint">Mass Intention</label>
-                </div>
-                <div class="donation">
-                  <input type="radio" id = "check-chrsub" name = "donation" value="s">
-                  <label for="check-chrsub">Church Subscription</label>
-                </div>
-              </div>
-            </div>
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" name="address">
           </div>
-          <div class="col-12">
-            <label for="inputAmount" class="form-label">Amount</label>
-            <input type="number" class="form-control" id="inputAmount" required name="amount">
-          </div>
-          
           <div class="col-12">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="gridCheck" checked value="y">
               <label class="form-check-label" for="gridCheck">
-                Send receipt to email and WhatsApp  
+                Send notifications to email and WhatsApp  
               </label>
             </div>
           </div>
           
           <div class="col-12">
-            <button type="submit" class="btn btn-warning">Register & Pay</button>
+            <button type="submit" class="btn btn-warning" name="submit">Register</button>
           </div>
         </form>
       </div>
@@ -146,6 +119,9 @@
       
     </div>
   </section>
+
+
+  
     <!--SCRIPTS--------------------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -153,6 +129,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="main.js"></script>
 </body>
 </html>
+
+<?php
+  include 'config.php';
+
+ 
+    if (isset($_POST['submit'])){
+    
+    $firstName = $_POST['firstname'];
+    $lastName = $_POST['lastname'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $address = $_POST['address'];
+
+  //Database Connection
+  if($conn->connect_error){
+      die('Connection Failed : '.$conn->connect_error);
+  }else{
+      $stmt = "insert into laity(firstName, lastName, email, mobile, address)
+       VALUES('$firstName','$lastName','$email','$mobile','$address')";
+       $query = mysqli_query($conn,$stmt);
+      
+      if($query){
+
+        ?>
+        <script>
+
+        Swal.fire({
+            title: "You are registered!",
+            text: "Welcome to Annunciation Church!",
+            icon: "success"
+          });
+    
+        </script>
+        <?php
+      }
+      
+  }
+}
+  ?>
