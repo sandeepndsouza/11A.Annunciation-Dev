@@ -10,6 +10,7 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Playfair+Display&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=PT+Serif:ital@1&family=Playfair+Display&family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -50,7 +51,7 @@
   </section>
   <section class="banner"></section>
 <!--   main contennt -->
-<section>
+<section class="register">
   <div class="container">
     <div class="row">
       <h2>Register</h2>
