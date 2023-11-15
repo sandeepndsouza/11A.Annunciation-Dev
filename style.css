@@ -385,15 +385,22 @@ padding: 10px; */
   .event .event-left .event-date {
     padding: 10px 0;
   }
-  .navbars ul li  a{
+  /* .navbars ul li  a{
     position: relative;
     margin: 0 15px;
     color: white;
     text-decoration: none;
-    /* letter-spacing: 2px; */
+    letter-spacing: 2px;
     font-size: 1rem;
-    /* font-weight: 300px; */
+    font-weight: 300px;
     transition: 0.5s;
   
+  } */
+
+  .team img{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
   }
 }
