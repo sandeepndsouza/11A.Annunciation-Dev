@@ -73,26 +73,26 @@ session_start();
 
 <!--Footer Section-->
 <section>
-    <div class="container-fluid footer">
-      <div class="row">
-        <div class="col">
-          <h3>Mass Timings</h3>
-          <p>Sunday 7.30AM Englist <br>
-             Sunday 9.30AM Kannada
-          </p>
-        </div>
-        <div class="col">
-          <h3>Mass Booking</h3>
-          <p>Contact: 96634-88122</p>
-        </div>
-        <div class="col">
-          <h3>Contact Information</h3>
-          <p>Contact: 96634-88122</p>
-        </div>
+  <div class="container-fluid footer">
+    <div class="row">
+      <div class="col-lg-3 col-md-12">
+        <h4>Mass Timings</h4>
+        <p>Sunday 7.15AM English <br>
+           Sunday 9.30AM Kannada
+        </p>
       </div>
-      
+      <div class="col-lg-3 col-md-12">
+        <h4>Mass Booking</h4>
+        <p>Contact: 98868-69004</p>
+      </div>
+      <div class="col-lg-3 col-md-12">
+        <h4>Site Contact Information</h4>
+        <p>Contact: 96634-88122</p>
+      </div>
     </div>
-  </section>
+    
+  </div>
+</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>

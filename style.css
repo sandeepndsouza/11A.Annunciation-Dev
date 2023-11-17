@@ -126,6 +126,8 @@ padding-top: 20px;
     width: 250px;
 }
 
+
+
 .parish h2{
   text-align: center;
   font-family: 'Dancing Script', cursive;
@@ -300,7 +302,8 @@ padding: 10px; */
   .team{
     /* justify-content: center; */
     align-items: center;
-     min-height: 90vh; 
+     /* min-height: 90vh;  */
+     min-height: 40vh; 
     /* background: linear-gradient(#D5A3FF 0%, #77A5F8 100%); */
     padding: 10px;
   }
