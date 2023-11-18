@@ -67,7 +67,7 @@ if($conn->connect_error){
           <li><a href="gallery.html">GALLERY</a></li>
           <li><a href="donations.html">DONATIONS</a></li>
           <li><a href="register.php">REGISTER</a></li>
-          <li><a href="team.html">TEAM</a></li>
+          <li><a href="team.php">TEAM</a></li>
         </ul>
     </div>
   </section>
@@ -97,7 +97,18 @@ if($conn->connect_error){
                     </tr>
                     <tr>
                         <td>Donated for</td>
-                        <td><?php echo $donation ?></td>
+                        <td><?php switch($donation){
+                                case "c":
+                                  echo  "Community Hall";
+                                  break;
+                                  case "d":
+                                    echo "Mass Intensions";
+                                    break;
+                                    case "s":
+                                      echo  "Yearly Subscription";
+                                      break;
+                                    } 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Donation Amount</td>
@@ -105,6 +116,7 @@ if($conn->connect_error){
                     </tr>   
                 </tbody>
             </table>
+            <p style="color:blue";>Online payments are processed by SanAsh Technologies</p>
             <a class="btn btn-primary paynow" href="javascript:void(0)" 
             data-productid="<?php echo $id?>" 
             data-amount="<?php echo $amount;?>" 

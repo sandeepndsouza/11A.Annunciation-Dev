@@ -59,7 +59,7 @@
               <a href="register.php" class="nav-link active ">REGISTER</a>
             </li>
             <li class="nav-item">
-              <a href="team.html" class="nav-link">TEAM</a>
+              <a href="team.php" class="nav-link">TEAM</a>
             </li>
           </ul>
         </div>
